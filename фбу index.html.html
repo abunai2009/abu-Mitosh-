@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Мусконтаййге арналған махаббат ойыны</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f7e6f2, #ffe6ea); /* жұмсақ романтикалық фон */
+    color: #330033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+.container {
+    text-align: center;
+    width: 800px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    position: relative;
+}
+img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #ffd6e8;
+}
+.sticker {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    opacity: 0.85;
+}
+button {
+    background-color: #b3598c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+button:hover {background-color:#7e2960; transform:scale(1.05);}
+.hidden { display: none; }
+.magic-text {font-size:18px; line-height:1.6; color:#5c003d; animation:glow 2s infinite alternate;}
+@keyframes glow {from {text-shadow:0 0 5px #b3598c;} to {text-shadow:0 0 15px #ff66b2;}}
+.gallery {display:flex; flex-wrap:wrap; justify-content:center;}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Бет 1: Сәлемдесу -->
+<div class="page" id="page1">
+    <h2>Қайырлы таң, Мусконтайй 🌸</h2>
+    <p>Жақсы ұйықтап, көңілің жайнап тұр деп сенемін. Бұл күн біздің махаббатымыз үшін жаңа қуаныш әкелсін 💖</p>
+    <!-- Стикерлер -->
+    <img src="https://i.imgur.com/7b5E2zM.png" class="sticker" style="top:10px; left:20px;"> <!-- Аниме бет -->
+    <img src="https://i.imgur.com/3r9c5I1.png" class="sticker" style="top:60px; right:20px;"> <!-- Мысық -->
+    <button onclick="nextPage(2)">Келесі бет</button>
+</div>
+
+<!-- Бет 2: Махаббат мәтіні -->
+<div class="page hidden" id="page2">
+    <h2>Махаббатымыз жарқырап тұр 🌹</h2>
+    <p class="magic-text">
+        Мусконтайй, сенің күлкің менің жанымды жарықтандырады. <br>
+        Сенің қасыңда болу — мен үшін өмірдегі ең керемет сый. <br>
+        Жаным, әрбір сәтіміз естен кетпейтін, жарқын, әрі терең махаббатқа толы. <br>
+        Сенің мейірімің мені шабыттандырады, жүрегімді жылытатынын білесің бе? <br>
+        Мен саған шексіз сүйіспеншілікпен қараймын. ❤️
+    </p>
+    <img src="https://i.imgur.com/7b5E2zM.png" class="sticker" style="top:20px; left:50px;">
+    <img src="https://i.imgur.com/3r9c5I1.png" class="sticker" style="bottom:30px; right:60px;">
+    <button onclick="nextPage(3)">Келесі бет</button>
+</div>
+
+<!-- Бет 3: Менің сүйікті тамағым -->
+<div class="page hidden" id="page3">
+    <h2>Менің сүйікті тамағым 🍲</h2>
+    <p>Картоп сорпасы 😋</p>
+    <img src="https://i.imgur.com/3r9c5I1.png" class="sticker" style="top:10px; left:10px;">
+    <button onclick="nextPage(4)">Келесі бет</button>
+</div>
+
+<!-- Бет 4: Галерея -->
+<div class="page hidden" id="page4">
+    <h2>Біздің фотогалерея 📸</h2>
+    <div class="gallery">
+        <img src="" alt="Фото 1">
+        <img src="" alt="Фото 2">
+        <img src="" alt="Фото 3">
+        <img src="" alt="Фото 4">
+        <img src="" alt="Фото 5">
+        <img src="" alt="Фото 6">
+        <img src="" alt="Фото 7">
+        <img src="" alt="Фото 8">
+        <img src="" alt="Фото 9">
+        <img src="" alt="Фото 10">
+    </div>
+    <button onclick="nextPage(5)">Келесі бет</button>
+</div>
+
+<!-- Бет 5: Өлең -->
+<div class="page hidden" id="page5">
+    <h2>Сен үшін өлең 📜</h2>
+    <p class="magic-text">
+        Мусконтайй, алдыңда тұр асқар белес,<br>
+        ҰБТ — бір сынақ қана, қорқатын емес.<br>
+        Сенің ақылың, еңбегің, сабырың бар,<br>
+        Сен сенсең өзіңе — алынбас жоқ бір белес.<br><br>
+        Түндерде оқып шаршасаң да берілме,<br>
+        Әрбір еңбегің кетпейді ешқашан желге.<br>
+        Мен сенемін саған бәрінен артық,<br>
+        Сен лайықсың ең биік жеңіске, елге.<br><br>
+        Сенің арманың —менің де арманым,<br>
+        Жеңісің — жүрегімнің жарқыраған таңым.<br>
+        Қиын сәтте қолыңнан ұстап тұрам,<br>
+        Қандай жағдай болса да, жаным.
+    </p>
+    <img src="https://i.imgur.com/7b5E2zM.png" class="sticker" style="top:40px; right:40px;">
+    <button onclick="nextPage(6)">Келесі бет</button>
+</div>
+
+<!-- Бет 6: Қоштасу / Рахмет -->
+<div class="page hidden" id="page6">
+    <h2>Қуаныш пен махаббатқа рахмет 🌸</h2>
+    <p>
+        Мусконтайй, сен менің жүрегімнің жарығысың. ❤️<br>
+        Біз бірге көп қуанышқа бөлендік, күлкілі, тәтті сәттеріміз есте қалады. <br>
+        Ең бастысы — біздің <strong>үйлену датамыз: 02.02.2032</strong> 🥰💍<br>
+        Мен сені шексіз жақсы көремін және әрдайым жанында боламын. 🌷<br>
+        Махаббатымыз мәңгілікке!
+    </p>
+    <img src="https://i.imgur.com/3r9c5I1.png" class="sticker" style="bottom:20px; left:20px;">
+    <img src="https://i.imgur.com/7b5E2zM.png" class="sticker" style="bottom:20px; right:50px;">
+</div>
+
+</div>
+
+<script>
+function nextPage(num){
+    document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));
+    document.getElementById('page'+num).classList.remove('hidden');
+    createHearts();
+}
+function createHearts(){
+    for(let i=0;i<3;i++){
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random()*700+'px';
+        heart.style.top = Math.random()*500+'px';
+        document.querySelector('.container').appendChild(heart);
+        setTimeout(()=>heart.remove(),2000);
+    }
+}
+</script>
+</body>
+</html>
